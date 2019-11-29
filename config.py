@@ -18,6 +18,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     # Enable Flask's debugging features. Should be False in production
     SQLALCHEMY_ECHO = True
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 class ProductionConfig(Config):
@@ -29,6 +30,7 @@ class ProductionConfig(Config):
     """
 
     DEBUG = False
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 app_config = {
     'development': DevelopmentConfig,
